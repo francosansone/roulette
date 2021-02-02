@@ -1,4 +1,5 @@
 #include "player/bet.h"
+#include "utils/utils.h"
 
 Bet::Bet(){};
 
@@ -33,15 +34,7 @@ std::string Bet::toString(){
 }
 
 std::string Bet::colorValueToString(int value){
-    if (value == 1)
-    {
-        return "Red";
-    }
-
-    if(value == 2)
-        return "Black";
-
-    return "Zero";
+    return Utils::colorToString(Color(value));
 }
 
 std::string Bet::evenValueToString(bool value){

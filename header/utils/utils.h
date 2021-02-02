@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "roulette/roulette.h"
+
 using namespace std;
 
 class Utils {
@@ -13,7 +15,7 @@ class Utils {
     static Utils *pinstance;
 
     string fileName;
-    //static ofstream debugFile;
+    static ofstream debugFile;
 
 public:
 
@@ -22,6 +24,8 @@ public:
     void debug(const char *data);
 
     void destroy();
+
+    static string colorToString(Color color);
 
 };
 

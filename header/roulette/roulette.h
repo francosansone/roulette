@@ -1,6 +1,8 @@
 #ifndef ROULETTE_H
 #define ROULETTE_H
 
+#include <string>
+
 /*
 
 This is the roulette. It has 37 different numbers, with its colors.

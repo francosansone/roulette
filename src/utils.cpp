@@ -10,7 +10,7 @@
 using namespace std;
 
 Utils *Utils::pinstance = 0;
-//ofstream Utils::debugFile = ofstream();
+ofstream Utils::debugFile = ofstream();
 
 Utils::Utils(){
 
@@ -32,7 +32,8 @@ Utils::Utils(){
     fileName += (std::to_string(ltm->tm_sec));
     fileName += ".log";
 
-    //debugFile.open(fileName.c_str(), ios_base::app);
+    debugFile.open(fileName.c_str(), ios_base::app); 
+    // We keep the file open for performance reasons
 }
 
 Utils *Utils::getInstance(){
@@ -43,12 +44,28 @@ Utils *Utils::getInstance(){
 }
 
 void Utils::debug(const char *data){
- //   debugFile << data << endl;
+    debugFile << data << endl;
     cout << data << endl;
 }
 
 void Utils::destroy(){
-    //debugFile.close();
+    debugFile.close();
     delete pinstance;
     pinstance = NULL;
+}
+
+string Utils::colorToString(Color color){
+    switch (color)
+    {
+    case Color::Red:
+        return "Red";
+    
+    case Color::Black:
+        return "Black";
+
+    case Color::Zero:
+        return "Zero";
+    }
+
+    return "";
 }
