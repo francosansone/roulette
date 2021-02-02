@@ -2,7 +2,7 @@
 
 ![](./Roulette_pic.png)
 
-This is a simulation of the roulette game in which six players (A, B, C D and E) will make their bets.
+This is a simulation of the roulette game in which six players (A, B, C D, E and F) will make their bets.
 
 Player A bets on red.
 
