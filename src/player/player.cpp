@@ -47,14 +47,12 @@ void Player::checkBorderConditions(){
 
 int Player::moneyFromNotepad(){
     checkBorderConditions();
-    cout << "Player::moneyFromNotepad " << notepad.size() << endl;
     return notepad.front() + notepad.back();
 }
 
 const Bet Player::makeABet(){
     Bet bet = strategy->getBet();
     int money = moneyFromNotepad();
-    cout << "Player::makeABet " << notepad.size() << endl;
     investedMoney += money;
     lastBet = money;
     bet.money = money;
@@ -65,9 +63,6 @@ const Bet Player::makeABet(){
 }
 
 void Player::payBet(bool win, int money){
-
-    //cout << "Player::payBet notepad size: " << notepad.size() << endl;
-
     #if PLAYER_DEBUG
     cout << "notepad of " << name <<":" << endl;
     for(list<int>::iterator it = notepad.begin(); it != notepad.end();++it)
@@ -89,8 +84,6 @@ void Player::payBet(bool win, int money){
 #endif
 
     earnedMoney += money;
-
-    cout << "Player::payBet notepad size: " << notepad.size() << endl;
 }
 
 void Player::printBalance(){

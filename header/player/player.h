@@ -5,7 +5,7 @@
 #include <string>
 #include <list>
 
-#define PLAYER_DEBUG 1
+#define PLAYER_DEBUG 0
 
 class Bet;
 class PlayerStrategy;

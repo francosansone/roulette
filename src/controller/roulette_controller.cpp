@@ -70,7 +70,7 @@ void RouletteController::spin(){
     string output = "Spin result: ";
     output += to_string(numberWinner->number);
     output += " ";
-    output += to_string(numberWinner->color);
+    output += Utils::colorToString(numberWinner->color);
 
     Utils::getInstance()->debug(output.c_str());
 }
@@ -78,9 +78,7 @@ void RouletteController::spin(){
 void RouletteController::payBets(){
     Utils::getInstance()->debug("paying bets");
     for(unsigned i = 0; i < players.size(); i++){
-        std::cout << i <<  " here we are" << endl;
         Bet bet = bets[i];
-        std::cout << i <<  " here we are 2" << endl;
         bool win = false;
         int pay = 0;
 
@@ -110,11 +108,7 @@ void RouletteController::payBets(){
 
         moneyOut += pay;
 
-        std::cout << i << " here we are 3" << endl;
-
         players[i].payBet(win, pay);
-
-        std::cout << i <<  " here we are4" << endl;
 
         string output = "Paying to ";
         output += players[i].getName();
