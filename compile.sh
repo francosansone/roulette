@@ -1,6 +1,6 @@
 #!/bin/bash
 
-g++ -Wall -I header/ \
+g++ -std=c++11 -lstdc++fs -Wall -I header/ \
   header/utils/utils.h \
   header/roulette/roulette.h \
   header/player/bet.h \
