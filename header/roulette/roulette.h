@@ -1,6 +1,13 @@
 #ifndef ROULETTE_H
 #define ROULETTE_H
 
+/*
+
+This is the roulette. It has 37 different numbers, with its colors.
+Spin will return a random number, simulating the actual spin.
+
+*/
+
 #define NUMBER_OF_POCKETS 37
 
 enum Color {

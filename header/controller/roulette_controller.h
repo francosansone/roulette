@@ -3,6 +3,13 @@
 #include <vector>
 #include "player/bet.h"
 
+/*
+
+This class represents the croupier.
+It has to take the bets, spin the roulette and pay the players.
+
+*/
+
 class Player;
 class Roulette;
 class Pocket;
