@@ -18,7 +18,7 @@ RouletteController::RouletteController(Roulette *roulette)
 
 RouletteController::~RouletteController(){
     //delete roulette;
-    //delete numberWinner;
+    delete numberWinner;
 }
 
 void RouletteController::addPlayer(Player player){
