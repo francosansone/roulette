@@ -10,6 +10,7 @@ class PlayerStrategyColor : public PlayerStrategy {
 
 public:
     PlayerStrategyColor(int color);
+    ~PlayerStrategyColor();
 
     Bet getBet();
 

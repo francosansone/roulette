@@ -1,3 +1,6 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <stdio.h>
 #include <string>
 #include <list>
@@ -30,4 +33,8 @@ public:
     const int getInvestedMoney() { return investedMoney; }
     const int getEarnedMoney() { return earnedMoney; }
 
+    void printBalance();
+
 };
+
+#endif

@@ -1,11 +1,16 @@
+#include <string>
+
 enum BetType {
     ColorBet,
-    PairBet,
+    EvenBet,
     HighBet,
 };
 
 
 class Bet {
+    std::string colorValueToString(int value);
+    std::string evenValueToString(bool value);
+    std::string highValueToString(bool value);
 public:
     BetType type;
     int value;
@@ -14,4 +19,6 @@ public:
     Bet();
 
     Bet(BetType type, int value);
+
+    std::string toString();
 };

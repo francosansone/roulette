@@ -7,6 +7,10 @@ PlayerStrategyHigh::PlayerStrategyHigh(bool high)
     bet = new Bet(BetType::HighBet, high);
 }
 
+PlayerStrategyHigh::~PlayerStrategyHigh(){
+    delete bet;
+}
+
 Bet PlayerStrategyHigh::getBet(){
     return *bet;
 }

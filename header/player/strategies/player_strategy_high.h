@@ -11,6 +11,7 @@ class PlayerStrategyHigh : public PlayerStrategy {
 
 public:
     PlayerStrategyHigh(bool high);
+    ~PlayerStrategyHigh();
 
     Bet getBet();
 

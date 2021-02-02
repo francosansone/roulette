@@ -9,6 +9,10 @@ PlayerStrategyColor::PlayerStrategyColor(int color)
     bet = new Bet(BetType::ColorBet, color);
 }
 
+PlayerStrategyColor::~PlayerStrategyColor(){
+    delete bet;
+}
+
 
 Bet PlayerStrategyColor::getBet(){
     return *bet; 

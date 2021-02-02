@@ -1,3 +1,6 @@
+#ifndef ROULETTE_H
+#define ROULETTE_H
+
 #define NUMBER_OF_POCKETS 37
 
 enum Color {
@@ -70,3 +73,4 @@ public:
     
 };
 
+#endif

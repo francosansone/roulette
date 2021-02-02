@@ -25,15 +25,18 @@ class RouletteController {
     void payBets();
 
     bool checkByColor(Bet bet);
-    bool checkIsPair(Bet bet);
+    bool checkIsEven(Bet bet);
     bool checkIsHigh(Bet bet);
 
 public:
 
     RouletteController(Roulette *roulette);
+    ~RouletteController();
 
     void addPlayer(Player player);
 
     void startPlaying(unsigned int plays);
+
+    void printBalance();
     
 };
