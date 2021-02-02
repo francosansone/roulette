@@ -151,14 +151,14 @@ void RouletteController::printBalance() {
     for(unsigned i = 0; i < players.size(); i++)
         players[i].printBalance();
 
-    output = "Casino: \n";
-    output += "Input: $";
-    output += to_string(moneyIn);
-    output += "\noutput: $";
-    output += to_string(moneyOut);
-    output += "\n";
+    string output2 = "Casino: \n";
+    output2 += "Input: $";
+    output2 += to_string(moneyIn).c_str();
+    output2 += "\noutput: $";
+    output2 += to_string(moneyOut).c_str();
+    output2 += "\n";
 
-    Utils::getInstance()->debug(output.c_str());
+    Utils::getInstance()->debug(output2.c_str());
 
     Utils::getInstance()->debug("----------------------------------------");
     
