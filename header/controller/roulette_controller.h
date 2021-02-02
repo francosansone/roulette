@@ -19,8 +19,8 @@ class RouletteController {
     std::vector<Player> players;
     std::vector<Bet> bets;
 
-    long int moneyIn;
-    long int moneyOut;
+    int moneyIn;
+    int moneyOut;
 
     bool isPlaying;
 

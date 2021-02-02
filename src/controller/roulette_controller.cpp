@@ -8,7 +8,9 @@
 using namespace std;
 
 RouletteController::RouletteController(Roulette *roulette)
-    : isPlaying(false)
+    : moneyIn(0)
+    , moneyOut(0)
+    , isPlaying(false)
     , roulette(roulette)
 {
     numberWinner = new Pocket();
@@ -153,9 +155,9 @@ void RouletteController::printBalance() {
 
     string output2 = "Casino: \n";
     output2 += "Input: $";
-    output2 += to_string(moneyIn).c_str();
+    output2 += to_string(moneyIn);
     output2 += "\noutput: $";
-    output2 += to_string(moneyOut).c_str();
+    output2 += to_string(moneyOut);
     output2 += "\n";
 
     Utils::getInstance()->debug(output2.c_str());
