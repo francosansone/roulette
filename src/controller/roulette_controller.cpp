@@ -10,7 +10,9 @@ using namespace std;
 RouletteController::RouletteController(Roulette *roulette)
     : isPlaying(false)
     , roulette(roulette)
-{}
+{
+    numberWinner = new Pocket();
+}
 
 RouletteController::~RouletteController(){
     //delete roulette;
